@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-hotels',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HotelsComponent implements OnInit {
 
+  @Input() hotels;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  test(item) {
+    console.log('star count ', String(item));
   }
 
 }

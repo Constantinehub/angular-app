@@ -1,11 +1,11 @@
 <mat-toolbar class="toolbar" color="primary">
   <img src="https://cdn.freebiesupply.com/logos/large/2x/angular-icon-1-logo-svg-vector.svg" alt="">
-  <span>My not a first Angular application</span>
+  <span>{{headerTitle}}</span>
 </mat-toolbar>
 
 <div class="app-box">
   <div class="hotels">
-    <app-hotels></app-hotels>
+    <app-hotels [hotels]="hotels"></app-hotels>
   </div>
   <mat-list class="widgets" role="list">
     <mat-list-item role="listitem">
