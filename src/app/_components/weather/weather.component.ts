@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./weather.component.scss']
 })
 export class WeatherComponent implements OnInit {
+  public weatherTitle = 'The Weather in this hotel';
 
   constructor() { }
 

@@ -30,7 +30,16 @@
       position: absolute;
       top: 0;
       right: 20px;
-      .star {
+      display: inline-flex;
+      align-items: flex-end;
+      .star-amount {
+        display: inline-flex;
+        font-size: 16px;
+        font-weight: bold;
+        color: salmon;
+        margin-right: 5px;
+      }
+      .star-icon {
         color: orange;
       }
     }

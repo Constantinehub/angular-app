@@ -1,0 +1,35 @@
+.card {
+  width: 100%;
+  background-color: lightskyblue;
+  .header {
+    /deep/.mat-card-header-text {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .content {
+    .weather-item {
+      display: flex;
+      align-items: center;
+      padding: 5px 0;
+      margin-bottom: 5px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .icon {
+        margin-right: 10px;
+        color: deeppink;
+      }
+      .degrees {
+        font-size: 18px;
+        font-weight: bold;
+        color: deeppink;
+        &:after {
+          content: '°';
+          margin-left: 3px;
+          color: deeppink;
+        }
+      }
+    }
+  }
+}

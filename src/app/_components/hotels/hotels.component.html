@@ -6,9 +6,9 @@
     <h1 class="card-title">{{item.title}}</h1>
     <div class="card-description">{{item.description}}</div>
     <div class="card-location">{{item.address}}</div>
-    <!--<div class="card-rating">{{item.stars}}</div>-->
-    <div class="card-rating" *ngIf="item.stars">
-      <mat-icon class="star">star</mat-icon>
+    <div class="card-rating">
+      <span class="star-amount">{{item.stars}}</span>
+      <mat-icon class="star-icon">star</mat-icon>
     </div>
   </mat-card-content>
   <mat-card-actions>

@@ -15,8 +15,13 @@
   padding: 0 100px;
   .hotels {
     width: 100%;
+    margin-right: 30px;
   }
   .widgets {
     min-width: 300px;
   }
+}
+
+/deep/.card {
+  margin-bottom: 30px;
 }
