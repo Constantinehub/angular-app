@@ -5,7 +5,11 @@
 
 <div class="app-box">
   <div class="hotels">
-    <app-hotels [hotels]="hotels"></app-hotels>
+    <app-hotels
+      [hotels]="hotels"
+      (selectedHotelItem)="testGet($event)"
+    >
+    </app-hotels>
   </div>
   <div class="widgets">
     <app-weather></app-weather>

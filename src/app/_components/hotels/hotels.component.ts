@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {IHotel} from '../../interfaces/hotels.interface';
 
 @Component({
   selector: 'app-hotels',
@@ -8,14 +9,15 @@ import {Component, Input, OnInit} from '@angular/core';
 export class HotelsComponent implements OnInit {
 
   @Input() hotels;
+  @Output() selectedHotelItem: EventEmitter<IHotel> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  test(item) {
-    console.log('star count ', String(item));
+  public selectHotel(item: IHotel) {
+    this.selectedHotelItem.emit(item);
   }
 
 }
