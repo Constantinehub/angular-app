@@ -10,19 +10,23 @@ import { IHotel } from './interfaces/hotels.interface';
 })
 export class AppComponent implements OnInit {
   public headerTitle = 'My not a first Angular application';
-  public dbData: Observable<IHotel[]>;
-  public hotels: IHotel[];
+  public hotels$: Observable<IHotel[]>;
+  public activeHotel: IHotel;
 
   constructor(
     private requestService: RequestService
   ) {}
 
   public ngOnInit(): void {
-    this.dbData = this.requestService.getHotelsFromDb();
-    this.dbData.subscribe((hotelsData) => this.hotels = hotelsData);
+    this.hotels$ = this.requestService.getHotelsFromDb();
+    this.hotels$.subscribe(hotels => this.activeHotel = hotels[0]);
   }
 
-  public testGet(item) {
-    console.log(item);
+  public test() {
+    console.log('the first value ', this.activeHotel);
+  }
+
+  public getSelectedHotel(item) {
+    this.activeHotel = item;
   }
 }

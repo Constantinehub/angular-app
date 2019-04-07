@@ -59,3 +59,9 @@
     }
   }
 }
+
+/deep/.mat-card {
+  &.active {
+    background-color: lightblue;
+  }
+}

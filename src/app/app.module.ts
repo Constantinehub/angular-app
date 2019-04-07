@@ -9,6 +9,7 @@ import { HotelsComponent } from './_components/hotels/hotels.component';
 import { WeatherComponent } from './_components/weather/weather.component';
 import { ProfileComponent } from './_components/profile/profile.component';
 import { FeaturesComponent } from './_components/features/features.component';
+import { MenuComponent } from './_components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FeaturesComponent } from './_components/features/features.component';
     HotelsComponent,
     WeatherComponent,
     ProfileComponent,
-    FeaturesComponent
+    FeaturesComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

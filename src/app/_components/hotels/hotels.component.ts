@@ -8,7 +8,8 @@ import {IHotel} from '../../interfaces/hotels.interface';
 })
 export class HotelsComponent implements OnInit {
 
-  @Input() hotels;
+  @Input() hotels: IHotel[];
+  @Input() activeHotel;
   @Output() selectedHotelItem: EventEmitter<IHotel> = new EventEmitter();
 
   constructor() { }
@@ -16,8 +17,13 @@ export class HotelsComponent implements OnInit {
   ngOnInit() {
   }
 
-  public selectHotel(item: IHotel) {
+  public selectHotel(item: IHotel, event) {
+    event.stopPropagation();
     this.selectedHotelItem.emit(item);
   }
 
+  public test(ev): void {
+    ev.stopPropagation();
+    console.log(this.activeHotel);
+  }
 }

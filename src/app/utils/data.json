@@ -14,7 +14,7 @@
       "weather":  {
         "temperature": 12,
         "wind": 11,
-        "icon": "sun"
+        "icon": "grain"
       },
       "profile": {
         "followers": 112,
@@ -37,7 +37,7 @@
       "weather":  {
         "temperature": 5,
         "wind": 4,
-        "icon": "rain"
+        "icon": "waves"
       },
       "profile": {
         "followers": 12,
@@ -60,7 +60,7 @@
       "weather":  {
         "temperature": -2,
         "wind": 2,
-        "icon": "frost"
+        "icon": "ac_unit"
       },
       "profile": {
         "followers": 45,

@@ -3,16 +3,21 @@
   <span>{{headerTitle}}</span>
 </mat-toolbar>
 
+<mat-toolbar class="menu-box">
+  <app-menu (click)="test()"></app-menu>
+</mat-toolbar>
+
 <div class="app-box">
   <div class="hotels">
     <app-hotels
-      [hotels]="hotels"
-      (selectedHotelItem)="testGet($event)"
+      [hotels]="hotels$ | async"
+      [activeHotel]="activeHotel"
+      (selectedHotelItem)="getSelectedHotel($event)"
     >
     </app-hotels>
   </div>
   <div class="widgets">
-    <app-weather></app-weather>
+    <app-weather [activeHotel]="activeHotel"></app-weather>
     <app-profile></app-profile>
     <app-features></app-features>
   </div>

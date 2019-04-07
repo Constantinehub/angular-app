@@ -4,12 +4,12 @@
   </mat-card-header>
   <mat-card-content class="content">
     <div class="weather-item">
-      <mat-icon class="icon">wb_sunny</mat-icon>
-      <div class="degrees">12</div>
+      <mat-icon class="icon">{{activeHotel.weather.icon}}</mat-icon>
+      <div class="degrees">{{activeHotel.weather.temperature}}</div>
     </div>
     <div class="weather-item">
-      <mat-icon class="icon">pool</mat-icon>
-      <div class="degrees">12</div>
+      <mat-icon class="icon">clear_all</mat-icon>
+      <div class="degrees">{{activeHotel.weather.wind}}</div>
     </div>
   </mat-card-content>
 </mat-card>
