@@ -1,0 +1,27 @@
+.menu {
+  margin: 0;
+  height: 100%;
+  min-height: 64px;
+  display: flex;
+  align-items: stretch;
+  list-style-type: none;
+  .item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    padding: 0 10px;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      background-color: crimson;
+    }
+    &.active {
+      background-color: crimson;
+    }
+    .item-link {
+      color: lavender;
+    }
+  }
+}
