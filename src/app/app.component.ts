@@ -22,9 +22,9 @@ export class AppComponent implements OnInit {
     this.hotels$.subscribe(hotels => this.activeHotel = hotels[0]);
   }
 
-  public test() {
-    console.log('the first value ', this.activeHotel);
-  }
+  // public test(hotel) {
+  //   console.log('the first value ', hotel);
+  // }
 
   public getSelectedHotel(item) {
     this.activeHotel = item;

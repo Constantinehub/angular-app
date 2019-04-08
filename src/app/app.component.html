@@ -4,7 +4,7 @@
 </mat-toolbar>
 
 <mat-toolbar class="menu-box">
-  <!--<app-menu (click)="test()"></app-menu>-->
+  <app-menu></app-menu>
 </mat-toolbar>
 
 <div class="app-box">
@@ -17,7 +17,7 @@
     </app-hotels>
   </div>
   <div class="widgets">
-    <app-weather [activeHotel]="activeHotel"></app-weather>
+    <app-weather [activeHotel]="activeHotel.weather"></app-weather>
     <app-profile></app-profile>
     <app-features></app-features>
   </div>

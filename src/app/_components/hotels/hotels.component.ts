@@ -9,7 +9,7 @@ import {IHotel} from '../../interfaces/hotels.interface';
 export class HotelsComponent implements OnInit {
 
   @Input() hotels: IHotel[];
-  @Input() activeHotel;
+  @Input() activeHotel: number;
   @Output() selectedHotelItem: EventEmitter<IHotel> = new EventEmitter();
 
   constructor() { }
@@ -22,8 +22,8 @@ export class HotelsComponent implements OnInit {
     this.selectedHotelItem.emit(item);
   }
 
-  public test(ev): void {
-    ev.stopPropagation();
-    console.log(this.activeHotel);
-  }
+  // public test(ev): void {
+  //   ev.stopPropagation();
+  //   console.log(this.activeHotel);
+  // }
 }

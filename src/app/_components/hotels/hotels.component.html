@@ -1,7 +1,7 @@
 <mat-card
   *ngFor="let item of hotels"
   (click)="selectHotel(item, $event)"
-  [ngClass]="{'active': item.id === activeHotel.id}"
+  [ngClass]="{'active': item.id === activeHotel}"
 >
   <mat-card-header>
     <img mat-card-sm-image [src]="item.picture" alt="">
@@ -17,6 +17,6 @@
   </mat-card-content>
   <mat-card-actions>
     <button mat-button mat-raised-button color="warn">+ Add to favorites</button>
-    <button mat-button mat-raised-button (click)="test($event)">Get Hotels</button>
+    <button mat-button mat-raised-button>Get Hotels</button>
   </mat-card-actions>
 </mat-card>

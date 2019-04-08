@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IWeather} from '../../interfaces/hotels.interface';
+import {IHotel, IWeather} from '../../interfaces/hotels.interface';
 
 @Component({
   selector: 'app-weather',
@@ -7,14 +7,13 @@ import {IWeather} from '../../interfaces/hotels.interface';
   styleUrls: ['./weather.component.scss']
 })
 export class WeatherComponent implements OnInit {
-  @Input() public activeHotel;
+  @Input() public activeHotel: IWeather;
 
   public weatherTitle = 'The Weather in this hotel';
 
   constructor() { }
 
   ngOnInit() {
-    console.log('weather ', this.activeHotel);
   }
 
 }

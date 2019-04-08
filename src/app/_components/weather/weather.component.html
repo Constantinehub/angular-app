@@ -2,14 +2,14 @@
   <mat-card-header class="header">
     <mat-card-title>{{weatherTitle}}</mat-card-title>
   </mat-card-header>
-  <mat-card-content class="content">
+  <mat-card-content class="content" *ngIf="activeHotel">
     <div class="weather-item">
-      <mat-icon class="icon">{{activeHotel.weather.icon}}</mat-icon>
-      <div class="degrees">{{activeHotel.weather.temperature}}</div>
+      <mat-icon class="icon">{{activeHotel.icon}}</mat-icon>
+      <div class="degrees">{{activeHotel.temperature}}</div>
     </div>
     <div class="weather-item">
       <mat-icon class="icon">clear_all</mat-icon>
-      <div class="degrees">{{activeHotel.weather.wind}}</div>
+      <div class="degrees">{{activeHotel.wind}}</div>
     </div>
   </mat-card-content>
 </mat-card>
