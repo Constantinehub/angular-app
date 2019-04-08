@@ -16,16 +16,16 @@
       }
       .icon {
         margin-right: 10px;
-        color: deeppink;
+        color: white;
       }
       .degrees {
         font-size: 18px;
         font-weight: bold;
-        color: deeppink;
+        color: floralwhite;
         &:after {
           content: '°';
           margin-left: 3px;
-          color: deeppink;
+          color: floralwhite;
         }
       }
     }

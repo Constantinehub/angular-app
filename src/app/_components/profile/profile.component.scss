@@ -1,5 +1,6 @@
 /deep/.profile-card {
   background-color: orange;
+  margin-bottom: 30px;
   .title {
     font-size: 20px;
     text-align: center;
@@ -25,8 +26,29 @@
       padding-left: 30px;
       .item {
         display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        &:last-child {
+          margin-bottom: 0;
+        }
         .subtitle {
-          font-size: 16px;
+          font-size: 20px;
+          font-style: italic;
+          color: white;
+          letter-spacing: 0.5px;
+        }
+        .count {
+          display: inline-flex;
+          align-items: center;
+          margin-left: 10px;
+          font-size: 18px;
+          font-weight: bold;
+          color: #333333;
+          &:before {
+            content: '-';
+            margin-right: 10px;
+            color: white;
+          }
         }
       }
     }

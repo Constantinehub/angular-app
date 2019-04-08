@@ -10,6 +10,7 @@
 <div class="app-box">
   <div class="hotels">
     <app-hotels
+      *ngIf="activeHotel"
       [hotels]="hotels$ | async"
       [activeHotel]="activeHotel.id"
       (selectedHotelItem)="getSelectedHotel($event)"
@@ -17,8 +18,14 @@
     </app-hotels>
   </div>
   <div class="widgets">
-    <app-weather [activeHotel]="activeHotel.weather"></app-weather>
-    <app-profile></app-profile>
+    <app-weather
+      *ngIf="activeHotel"
+      [activeHotel]="activeHotel.weather">
+    </app-weather>
+    <app-profile
+      *ngIf="activeHotel"
+      [activeHotel]="activeHotel.profile">
+    </app-profile>
     <app-features></app-features>
   </div>
 </div>

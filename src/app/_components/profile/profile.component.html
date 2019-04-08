@@ -2,16 +2,16 @@
   <mat-card-title class="title">{{profileTitle}}</mat-card-title>
   <mat-card-header class="header">
     <div class="profile-picture">
-      <img class="profile-icon" mat-card-sm-image [src]="" alt="">
+      <img class="profile-icon" mat-card-sm-image [src]="activeHotel.photo" alt="">
     </div>
     <div class="profile-info">
       <div class="item">
-        <div class="subtitle">title 1</div>
-        <div class="count">2</div>
+        <div class="subtitle">Followers</div>
+        <div class="count">{{activeHotel.followers}}</div>
       </div>
       <div class="item">
-        <div class="subtitle">title 2</div>
-        <div class="count">4</div>
+        <div class="subtitle">Following</div>
+        <div class="count">{{activeHotel.following}}</div>
       </div>
     </div>
   </mat-card-header>

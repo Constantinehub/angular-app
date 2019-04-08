@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {IProfile} from '../../interfaces/hotels.interface';
 
 @Component({
   selector: 'app-profile',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
   public profileTitle = 'This is the profile of this hotel';
+
+  @Input() activeHotel: IProfile;
 
   constructor() { }
 
