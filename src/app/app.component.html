@@ -4,14 +4,14 @@
 </mat-toolbar>
 
 <mat-toolbar class="menu-box">
-  <app-menu (click)="test()"></app-menu>
+  <!--<app-menu (click)="test()"></app-menu>-->
 </mat-toolbar>
 
 <div class="app-box">
   <div class="hotels">
     <app-hotels
       [hotels]="hotels$ | async"
-      [activeHotel]="activeHotel"
+      [activeHotel]="activeHotel.id"
       (selectedHotelItem)="getSelectedHotel($event)"
     >
     </app-hotels>

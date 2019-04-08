@@ -1,9 +1,7 @@
 .card {
-  width: 100%;
   background-color: lightskyblue;
   .header {
     /deep/.mat-card-header-text {
-      width: 100%;
       text-align: center;
     }
   }
