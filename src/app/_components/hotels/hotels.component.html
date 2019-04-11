@@ -1,5 +1,5 @@
 <mat-card
-  *ngFor="let item of hotels"
+  *ngFor="let item of hotels$ | async"
   (click)="selectHotel(item, $event)"
   [ngClass]="{'active': item.id === activeHotel}"
 >

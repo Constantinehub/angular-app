@@ -138,5 +138,7 @@
       }
     }
   },
-  "defaultProject": "angular-app"
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
