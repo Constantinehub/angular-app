@@ -11,7 +11,7 @@ import { ProfileComponent } from './_components/profile/profile.component';
 import { FeaturesComponent } from './_components/features/features.component';
 import { MenuComponent } from './_components/menu/menu.component';
 import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './reducers';
+import { reducers, metaReducers } from './state/reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 

@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { ActionTypes } from '../actions/action-hotels.actions';
+import {HotelActions, HotelActionTypes} from '../actions/action-hotels.actions';
 import { IHotel } from '../../interfaces/hotels.interface';
 
 export const initialState: IHotel[] = [
@@ -28,8 +28,15 @@ export const initialState: IHotel[] = [
   }
 ];
 
-export function reducer(state = initialState, action: Action): IHotel[] {
+export function reducer(state = initialState, action: HotelActions): IHotel[] {
   switch (action.type) {
+
+    case HotelActionTypes.ChooseHotel: {
+      const newState: IHotel[] = { ...state };
+      newState.splice(0, 1, action.payload);
+      console.log(newState);
+      return newState;
+    }
 
     default:
       return state;

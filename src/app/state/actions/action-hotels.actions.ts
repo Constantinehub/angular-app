@@ -1,12 +1,13 @@
 import { Action } from '@ngrx/store';
+import {IHotel} from '../../interfaces/hotels.interface';
 
-export enum ActionTypes {
-  LoadHotels = '[Hotels Component] Load Hotels',
+export enum HotelActionTypes {
+  ChooseHotel = '[Hotels] Active Hotel',
 }
 
-export class LoadActionHotelss implements Action {
-  readonly type = ActionTypes.LoadHotels;
+export class ChooseHotel implements Action {
+  readonly type: string = HotelActionTypes.ChooseHotel;
+  constructor(public payload: IHotel) {}
 }
 
-
-export type ActionHotelsActions = LoadActionHotelss;
+export type HotelActions = ChooseHotel;

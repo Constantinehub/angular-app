@@ -5,9 +5,9 @@ import {
   createSelector,
   MetaReducer
 } from '@ngrx/store';
-import { environment } from '../../environments/environment';
-import * as fromHotels from '../state/reducers/hotels.reducer';
-import {IHotel} from '../interfaces/hotels.interface';
+import { environment } from '../../../environments/environment';
+import * as fromHotels from './hotels.reducer';
+import {IHotel} from '../../interfaces/hotels.interface';
 
 export interface State {
   hotels: IHotel[];
